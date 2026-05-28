@@ -1,0 +1,161 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#eaeaea;
+}
+
+header{
+    background-color:#003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00bfff;
+}
+
+.banner{
+    position: relative;
+}
+
+.banner img{
+    width:100%;
+    height:400px;
+    object-fit: cover;
+}
+
+.banner::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.4);
+}
+
+.texto-banner{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    color:white;
+    text-align:center;
+    background-color:rgba(0,0,0,0.5);
+    padding:20px;
+    border-radius:10px;
+    z-index:2;
+}
+
+.titulo{
+    text-align:center;
+    margin-top:40px;
+    color:#003366;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.card {
+    width: 280px;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3{
+    padding:10px;
+}
+
+.card p{
+    padding:0 10px 15px;
+}
+
+.card button{
+    margin:10px;
+    padding:10px 18px;
+    border:none;
+    background-color:#003366;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.card button {
+    margin-top: auto;
+}
+
+footer{
+    background-color:#003366;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav{
+        display:flex;
+        gap:15px;
+    }
+
+    .banner img{
+        height:200px;
+    }
+
+    .texto-banner{
+        width:90%;
+    }
+
+    .cards{
+        padding:20px;
+    }
+
+    .card{
+        width:100%;
+        max-width:320px;
+    }
+}
